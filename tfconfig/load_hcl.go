@@ -128,6 +128,7 @@ func loadModule(dir string) (*Module, Diagnostics) {
 				}
 
 				if attr, defined := content.Attributes["default"]; defined {
+					v.HasDefault = true
 					// To avoid the caller needing to deal with cty here, we'll
 					// use its JSON encoding to convert into an
 					// approximately-equivalent plain Go interface{} value

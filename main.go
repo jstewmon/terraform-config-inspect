@@ -99,7 +99,7 @@ Provider Requirements:
 
 ## Input Variables
 {{- range .Variables }}
-* {{ tt .Name }}{{ if .Default }} (default {{ json .Default | tt }}){{else}} (required){{end}}
+* {{ tt .Name }}{{ if .HasDefault }} (default {{ json .Default | tt }}){{else}} (required){{end}}
 {{- if .Description}}: {{ .Description }}{{ end }}
 {{- end}}{{end}}
 
